@@ -391,11 +391,6 @@ function showPopup(correctCount) {
     popupOverlay.classList.add('show');
 }
 
-    popupEmoji.textContent = emoji;
-    popupTitle.textContent = title;
-    popupMessage.textContent = message;
-    popupOverlay.classList.add('show');
-}
 
 // ===== CLOSE POPUP =====
 popupCloseBtn.addEventListener('click', () => {
