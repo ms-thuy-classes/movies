@@ -4,7 +4,7 @@
 
 // ===== CONFIGURATION =====
 // Thay đổi Video ID YouTube tại đây
-const YOUTUBE_VIDEO_ID = "dQw4w9WgXcQ"; // <-- Thay video ID của bạn
+const YOUTUBE_VIDEO_ID = "8t_qFivFGaM?si=QOBUaHdtXVz54qBS"; // <-- Thay video ID của bạn
 const youtubeURL = `https://www.youtube.com/embed/${YOUTUBE_VIDEO_ID}`;
 
 // ===== QUIZ DATA =====
