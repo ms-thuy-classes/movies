@@ -128,6 +128,7 @@ const popupCloseBtn = document.getElementById('popup-close');
 function init() {
     renderContent();
     setupIntersectionObserver();
+    setupNameInput(); // 👈 Thêm dòng này
     updateStats(0);
 }
 
@@ -365,24 +366,30 @@ function updateStats(correctCount) {
 function showPopup(correctCount) {
     const score = ((correctCount / totalQuestions) * 10).toFixed(1);
     const percentage = (correctCount / totalQuestions) * 100;
+    const studentName = userNameInput.value.trim() || 'Student'; // 👈 Lấy tên
 
     let emoji, title, message;
 
     if (percentage >= 80) {
         emoji = '🎉';
-        title = 'Excellent!';
+        title = `Excellent, ${studentName}!`; // 👈 Gọi tên
         message = `Amazing work! You scored ${score}/10. You really know your stuff!`;
-        // Confetti for high scores
         startConfetti();
     } else if (percentage >= 50) {
         emoji = '👏';
-        title = 'Good Job!';
+        title = `Good Job, ${studentName}!`;
         message = `Nice effort! You scored ${score}/10. Keep it up!`;
     } else {
         emoji = '📚';
-        title = 'Keep Practicing!';
+        title = `Keep Practicing, ${studentName}!`;
         message = `You scored ${score}/10. Don't give up – practice makes perfect!`;
     }
+
+    popupEmoji.textContent = emoji;
+    popupTitle.textContent = title;
+    popupMessage.textContent = message;
+    popupOverlay.classList.add('show');
+}
 
     popupEmoji.textContent = emoji;
     popupTitle.textContent = title;
