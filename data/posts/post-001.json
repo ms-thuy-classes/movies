@@ -1,0 +1,53 @@
+{
+  "id": "post-001",
+  "videoId": "dQw4w9WgXcQ",
+  "videoTitle": "English Tenses Masterclass",
+  "videoDescription": "In this comprehensive lesson, Ms. Thúy breaks down all 12 English tenses with real-life examples. Perfect for intermediate learners who want to speak confidently!",
+  "level": "B1",
+  "duration": "15:30",
+  "quizData": [
+    {
+      "type": "mcq",
+      "question": "Which tense is used for habitual actions?",
+      "choices": ["Present Simple", "Present Continuous", "Present Perfect", "Past Simple"],
+      "answer": 0,
+      "explanation": "Present Simple is used for habits, routines, and general truths. Example: 'I drink coffee every morning.'"
+    },
+    {
+      "type": "fill",
+      "question": "Complete: 'She ___ (study) English for 3 years.' (present perfect)",
+      "answer": "has studied",
+      "explanation": "Present Perfect = have/has + past participle. 'She' uses 'has'."
+    },
+    {
+      "type": "mcq",
+      "question": "What does 'I have been waiting' express?",
+      "choices": [
+        "A completed past action",
+        "An action that started in the past and continues now",
+        "A future plan",
+        "A hypothetical situation"
+      ],
+      "answer": 1,
+      "explanation": "Present Perfect Continuous emphasizes the duration of an ongoing action that started in the past."
+    },
+    {
+      "type": "mcq",
+      "question": "Choose the correct past continuous form:",
+      "choices": [
+        "I was eat dinner.",
+        "I was eating dinner.",
+        "I ate dinner.",
+        "I have eaten dinner."
+      ],
+      "answer": 1,
+      "explanation": "Past Continuous = was/were + V-ing. Used for actions in progress at a specific past time."
+    },
+    {
+      "type": "fill",
+      "question": "Fill in: 'By next year, I ___ (graduate) from university.' (future perfect)",
+      "answer": "will have graduated",
+      "explanation": "Future Perfect = will have + past participle. Used for actions completed before a future time."
+    }
+  ]
+}
