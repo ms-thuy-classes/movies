@@ -802,3 +802,50 @@ body::after {
         font-size: 0.95rem;
     }
 }
+/* ===== NAME INPUT ===== */
+.name-input {
+    font-family: var(--font-heading);
+    font-weight: 700;
+    font-size: 1rem;
+    color: #2d3436;
+    background: rgba(255, 255, 255, 0.6);
+    border: 2px solid transparent;
+    border-radius: var(--radius-sm);
+    padding: 6px 12px;
+    min-width: 140px;
+    max-width: 220px;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+.name-input::placeholder {
+    color: #b2bec3;
+    font-weight: 500;
+    font-style: italic;
+}
+
+.name-input:hover {
+    background: rgba(255, 255, 255, 0.9);
+    border-color: rgba(195, 177, 225, 0.4);
+}
+
+.name-input:focus {
+    background: white;
+    border-color: var(--pastel-purple);
+    box-shadow: 0 0 0 4px rgba(195, 177, 225, 0.2);
+    transform: translateY(-1px);
+}
+
+/* Hiệu ứng nhẹ khi đã có tên */
+.name-input.has-name {
+    background: linear-gradient(135deg, rgba(255, 248, 220, 0.8), rgba(255, 236, 210, 0.8));
+    border-color: rgba(255, 179, 71, 0.3);
+}
+
+@media (max-width: 768px) {
+    .name-input {
+        min-width: 100px;
+        font-size: 0.9rem;
+        padding: 5px 10px;
+    }
+}
