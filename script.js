@@ -567,6 +567,61 @@ document.addEventListener('keydown', (e) => {
         popupOverlay.classList.remove('show');
     }
 });
+// ===== NAME INPUT HANDLING =====
+const userNameInput = document.getElementById('user-name');
 
+// Load tên đã lưu từ localStorage
+function loadUserName() {
+    const savedName = localStorage.getItem('msThuy_studentName');
+    if (savedName) {
+        userNameInput.value = savedName;
+        userNameInput.classList.add('has-name');
+    }
+}
+
+// Lưu tên khi người dùng gõ
+function setupNameInput() {
+    loadUserName();
+
+    // Lưu khi gõ (debounce nhẹ để không lưu quá nhiều)
+    let saveTimeout;
+    userNameInput.addEventListener('input', () => {
+        const name = userNameInput.value.trim();
+        
+        clearTimeout(saveTimeout);
+        saveTimeout = setTimeout(() => {
+            if (name) {
+                localStorage.setItem('msThuy_studentName', name);
+                userNameInput.classList.add('has-name');
+            } else {
+                localStorage.removeItem('msThuy_studentName');
+                userNameInput.classList.remove('has-name');
+            }
+        }, 300);
+    });
+
+    // Hiệu ứng khi focus
+    userNameInput.addEventListener('focus', () => {
+        userNameInput.select();
+    });
+
+    // Lưu khi nhấn Enter hoặc blur
+    userNameInput.addEventListener('blur', () => {
+        const name = userNameInput.value.trim();
+        if (name) {
+            localStorage.setItem('msThuy_studentName', name);
+            userNameInput.classList.add('has-name');
+        }
+    });
+
+    userNameInput.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter') {
+            e.preventDefault();
+            userNameInput.blur();
+        }
+        // Ngăn Enter kích hoạt checkAnswers
+        e.stopPropagation();
+    });
+}
 // ===== START THE APP =====
 document.addEventListener('DOMContentLoaded', init);
