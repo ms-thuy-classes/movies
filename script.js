@@ -10,104 +10,157 @@ const youtubeURL = `https://www.youtube.com/embed/${YOUTUBE_VIDEO_ID}`;
 // ===== QUIZ DATA =====
 // Thêm/sửa câu hỏi tại đây. Hỗ trợ 2 dạng: "mcq" và "fill"
 const quizData = [
-    {
-        type: "mcq",
-        question: "What is the main topic of the video?",
-        choices: [
-            "How to cook pasta",
-            "English grammar basics",
-            "Travel tips for Vietnam",
-            "Mathematics for beginners"
-        ],
-        answer: 1,
-        explanation: "The video focuses on fundamental English grammar concepts including tenses, sentence structure, and common expressions."
-    },
-    {
-        type: "mcq",
-        question: "What does the speaker say about 'present perfect' tense?",
-        choices: [
-            "It is used for past actions only",
-            "It connects past and present",
-            "It is the same as simple past",
-            "It is only used in formal writing"
-        ],
-        answer: 1,
-        explanation: "Present perfect tense connects a past action or state to the present moment. It's formed with 'have/has + past participle'."
-    },
-    {
-        type: "fill",
-        question: "Complete the sentence: 'She ___ to school every day.'",
-        answer: "goes",
-        explanation: "We use 'goes' because the subject 'She' is third person singular, and this is a habitual action (simple present tense)."
-    },
-    {
-        type: "mcq",
-        question: "Which sentence is grammatically correct?",
-        choices: [
-            "He don't like coffee.",
-            "He doesn't likes coffee.",
-            "He doesn't like coffee.",
-            "He not like coffee."
-        ],
-        answer: 2,
-        explanation: "With third person singular (he/she/it), we use 'doesn't' + base form of the verb. So 'He doesn't like coffee' is correct."
-    },
-    {
-        type: "fill",
-        question: "Fill in the blank: 'I have ___ (study) English for 5 years.'",
-        answer: "studied",
-        explanation: "Present perfect tense requires the past participle form. The past participle of 'study' is 'studied'."
-    },
-    {
-        type: "mcq",
-        question: "What is the meaning of the idiom 'break the ice'?",
-        choices: [
-            "To break something frozen",
-            "To start a conversation in a social setting",
-            "To feel very cold",
-            "To solve a difficult problem"
-        ],
-        answer: 1,
-        explanation: "'Break the ice' means to initiate conversation or make people feel more comfortable in a social situation, especially when people haven't met before."
-    },
-    {
-        type: "fill",
-        question: "Complete: 'If it rains tomorrow, we ___ stay at home.'",
-        answer: "will",
-        explanation: "This is a first conditional sentence: 'If + present simple, will + base verb'. It expresses a real possibility in the future."
-    },
-    {
-        type: "mcq",
-        question: "Choose the correct pronunciation guide for 'comfortable':",
-        choices: [
-            "com-FORT-a-ble (4 syllables)",
-            "COMF-ta-ble (3 syllables)",
-            "com-FOR-table (3 syllables)",
-            "COM-for-TA-ble (4 syllables)"
-        ],
-        answer: 1,
-        explanation: "Native speakers typically pronounce 'comfortable' with 3 syllables: COMF-ta-ble /ˈkʌmftəbəl/. Many learners mistakenly try to pronounce all written vowels."
-    },
-    {
-        type: "fill",
-        question: "Write the correct form: 'They ___ (play) football when it started to rain.'",
-        answer: "were playing",
-        explanation: "We use past continuous (was/were + V-ing) for an action that was in progress when another action interrupted it."
-    },
-    {
-        type: "mcq",
-        question: "What is the difference between 'make' and 'do'?",
-        choices: [
-            "They are completely interchangeable",
-            "'Make' is for creating things, 'do' is for actions/tasks",
-            "'Make' is formal, 'do' is informal",
-            "There is no difference"
-        ],
-        answer: 1,
-        explanation: "'Make' is generally used for creating or producing something (make a cake, make a plan), while 'do' is used for actions, tasks, or activities (do homework, do exercise)."
-    }
+  {
+    type: "mcq",
+    question: "Why does Sheldon say he cannot be adopted?",
+    choices: [
+      "Because he looks like his parents.",
+      "Because he has a twin sister.",
+      "Because he has a younger brother.",
+      "Because he knows his birth parents."
+    ],
+    answer: 1,
+    explanation: "Sheldon says, 'How can I be adopted when I have a twin sister?'"
+  },
+  {
+    type: "mcq",
+    question: "What were they about to do before dinner?",
+    choices: [
+      "Watch TV",
+      "Wash the dishes",
+      "Pray",
+      "Leave the house"
+    ],
+    answer: 2,
+    explanation: "Mary says, 'Now, let's pray.'"
+  },
+  {
+    type: "mcq",
+    question: "What food did Georgie wish they had?",
+    choices: [
+      "French fries",
+      "Mashed potatoes",
+      "Chicken nuggets",
+      "Tater tots"
+    ],
+    answer: 3,
+    explanation: "Georgie asks, 'How come we ain't got no tater tots?'"
+  },
+  {
+    type: "mcq",
+    question: "What does George Sr. say he prefers?",
+    choices: [
+      "Tater tots over mashed potatoes",
+      "Rice over potatoes ",
+      "Mashed potatoes over tater tots",
+      "Pizza over potatoes"
+    ],
+    answer: 0,
+    explanation: "George says he'd take tater tots over mashed potatoes any day."
+  },
+  {
+    type: "mcq",
+    question: "Why is Georgie unhappy about school?",
+    choices: [
+      "He failed his classes.",
+      "He has too much homework.",
+      "Sheldon will be in the same grade.",
+      "He is changing schools."
+    ],
+    answer: 2,
+    explanation: "Georgie complains that Sheldon will be in the same grade as him."
+  },
+  {
+    type: "mcq",
+    question: "What does Sheldon say about ninth grade?",
+    choices: [
+      "He wants to repeat it.",
+      "He won't stay there for very long.",
+      "He is afraid of it.",
+      "He plans to skip school."
+    ],
+    answer: 1,
+    explanation: "Sheldon says he isn't planning on being in the ninth grade for very long."
+  },
+  {
+    type: "mcq",
+    question: "Why can't George Sr. go to church?",
+    choices: [
+      "He is meeting with the other coaches.",
+      "He has homework.",
+      "He is sick",
+      "He is traveling."
+    ],
+    answer: 0,
+    explanation: "George Sr. says he is meeting with the other coaches."
+  },
+  {
+    type: "mcq",
+    question: "Why does Sheldon decide to go to church?",
+    choices: [
+      "He believes in God.",
+      "He likes church music.",
+      "He believes in Mom.",
+      "His teacher told him to go."
+    ],
+    answer: 2,
+    explanation: "Sheldon says, 'I don't believe in God, but I believe in Mom.'"
+  },
+  {
+    type: "mcq",
+    question: "Who asked Missy to do something?",
+    choices: [
+      "Sheldon",
+      "Heather",
+      "Georgie",
+      "Mary"
+    ],
+    answer: 3,
+    explanation: "Missy says Heather asked her to do something."
+  },
+  {
+    type: "mcq",
+    question: "According to Adult Sheldon, where did Jane Goodall go to study apes?",
+    choices: [
+      "Africa",
+      "Asia",
+      "Australia",
+      "Europe"
+    ],
+    answer: 0,
+    explanation: "Adult Sheldon says Jane Goodall had to go to Africa to study apes."
+  },
+  {
+    type: "fill",
+    question: "Complete the sentence: 'Sheldon said he was exploring ________ kinematics.'",
+    answer: "dimensional",
+    explanation: "The full phrase is 'dimensional kinematics.'"
+  },
+  {
+    type: "fill",
+    question: "Complete the sentence: 'Mary thanked God for the ________ they were about to receive.'",
+    answer: "food",
+    explanation: "She prayed, 'Thank you, God, for this food we're about to receive.'"
+  },
+  {
+    type: "fill",
+    question: "Complete the sentence: 'George Sr. preferred tater tots over mashed ________.'",
+    answer: "potatoes",
+    explanation: "George says he would take tater tots over mashed potatoes any day."
+  },
+  {
+    type: "fill",
+    question: "Complete the sentence: 'High school is a haven for higher ________.'",
+    answer: "learning",
+    explanation: "Sheldon describes high school as 'a haven for higher learning.'"
+  },
+  {
+    type: "fill",
+    question: "Complete the sentence: 'I don't believe in God, but I believe in ________.'",
+    answer: "Mom",
+    explanation: "Sheldon goes to church because he believes in his mother."
+  }
 ];
-
 // ===== GLOBAL VARIABLES =====
 let totalQuestions = quizData.length;
 let isChecked = false;
