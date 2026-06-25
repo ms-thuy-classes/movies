@@ -115,7 +115,7 @@ const quizData = [
       "Georgie",
       "Mary"
     ],
-    answer: 3,
+    answer: 1,
     explanation: "Missy says Heather asked her to do something."
   },
   {
@@ -156,8 +156,8 @@ const quizData = [
   },
   {
     type: "fill",
-    question: "Complete the sentence: 'I don't believe in God, but I believe in ________.'",
-    answer: "Mom",
+    question: "Complete the sentence: Sheldon says that he doesn't believe in God, but he believes in his  ________.'",
+    answer: "mom",
     explanation: "Sheldon goes to church because he believes in his mother."
   }
 ];
