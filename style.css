@@ -203,15 +203,39 @@ body::after {
 
 .page-title h1 {
     font-family: var(--font-heading);
-    font-size: clamp(2rem, 5vw, 3.5rem);
+    font-size: clamp(2.4rem, 5vw, 4rem);
     font-weight: 900;
-    background: linear-gradient(135deg, #FFB347, #FF6B9D, #C3B1E1, #A7C7E7);
+    letter-spacing: -1px;
+    margin-bottom: 10px;
+
+    background: linear-gradient(
+        90deg,
+        #ff6b35 0%,
+        #ff3d71 30%,
+        #7b5cff 65%,
+        #0099ff 100%
+    );
+
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
-    text-shadow: none;
-    margin-bottom: 8px;
-    letter-spacing: -1px;
+
+    -webkit-text-stroke: 1.2px rgba(255,255,255,.9);
+
+    filter: drop-shadow(0 6px 18px rgba(123,92,255,.35));
+
+    animation: titleGlow 3s ease-in-out infinite;
+}
+@keyframes titleGlow {
+    0%,100%{
+        filter: drop-shadow(0 6px 18px rgba(123,92,255,.35));
+    }
+
+    50%{
+        filter:
+            drop-shadow(0 0 10px rgba(255,255,255,.8))
+            drop-shadow(0 8px 25px rgba(255,61,113,.45));
+    }
 }
 
 .page-title p {
